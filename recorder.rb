@@ -8,5 +8,5 @@ puts x,y,w,h,g,id
 time = Time.now.to_s.gsub(/\s/, '-')[0..-7]
 
 # need to use xdotool(?) to grab the correct desktop currently active instead of :1 
-`ffmpeg -f x11grab -s "#{w}"x"#{h}" -i :1.0+$#{x},#{y} -f alsa -i pulse ~/Videos/recording-#{time}.webm`
+`ffmpeg -f x11grab -s #{w}x#{h} -i :1.0+#{x},#{y} -f alsa -i pulse ~/Videos/recording-#{time}.webm`
 
