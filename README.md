@@ -25,3 +25,8 @@ Bind it to a shortcut on the keyboard  (e.g on GNOME)
 
 
 Now you can just press that shortcut to start recording an area on the screen, press it again to stop recording 😊
+
+
+# Why not just use [insert GUI here] instead?!
+
+Because for some reason the popular options such as Kazam and SimpleScreenRecorder don't work correctly with my resolution scaled screen. So I made my own script 🤠
