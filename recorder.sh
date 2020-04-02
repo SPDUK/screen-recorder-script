@@ -1,4 +1,5 @@
 #!/bin/bash
+# return early instead of if else
 if pidof ffmpeg
   then
     killall ffmpeg
@@ -18,10 +19,10 @@ if pidof ffmpeg
     if [ $width -gt 0 ];
      then
       notify-send 'Started Recording!' --icon=dialog-information
+      
       # records without audio for audio add: -f alsa -i pulse 
-      ffmpeg \
-      -nostdin -threads 4 -thread_queue_size 512 -framerate 60 \
-      -f x11grab -s "$W"x"$H" \
-      -i $DISPLAY.0+$X,$Y ~/Videos/recording-$time.mp4 
+      ffmpeg -f x11grab -s "$W"x"$H" -framerate 60  -thread_queue_size 512  -i $DISPLAY.0+$X,$Y \
+       -vcodec libx264 -qp 18 -preset ultrafast \
+       ~/Videos/recording-$time.mp4
     fi
 fi
