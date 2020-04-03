@@ -14,13 +14,18 @@ Requirements:
 
 # Setup
 
-`git clone git@github.com:SPDUK/screen-recorder-script.git` into a folder (e.g run the command when inside your `~/Projects` folder)
-Or download and place the `recorder.sh` script anywhere you want
+`curl https://raw.githubusercontent.com/SPDUK/screen-recorder-script/master/recorder.sh > ~/screen-recorder.sh && chmod +x ~/screen-recorder.sh`
+
+
+
+
+This places the script into your home directory, you can move it anywhere though 🤠.
+
 
 Bind it to a shortcut on the keyboard  (e.g on GNOME)
 - Open keyboard shortcuts
 - Give it a name (e.g "Record Area on Screen")
-- Enter `./~Projects/screen-recorder-script/recorder.sh` into the "command" input
+- Enter `.~/screen-recorder.sh` into the "command" input
 - Add a shortcut & save
 
 
